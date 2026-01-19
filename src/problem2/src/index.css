@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.bg-surface-subtle {
+  background-color: var(--color-surface-subtle);
+}
+
+.bg-surface-highlight {
+  background-color: var(--color-surface-highlight);
+}
+
+.border-subtle {
+  border-color: var(--color-border-subtle);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-error {
+  color: var(--color-error);
+}
+
+.bg-background-main {
+  background-color: var(--color-background-main);
+}
+
+.bg-background-primary {
+  background-color: var(--color-background-primary);
+}
+
+.bg-gradient-purple-pink {
+  background: linear-gradient(to right, #9333ea, #db2777);
+  transition: background var(--animation-duration-normal) ease;
+}
+
+.hover\:bg-gradient-purple-pink-light:hover {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+}
+
+.border-default {
+  border-color: var(--color-border-default);
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-background-main: #13151a;
+  --color-background-primary: rgba(17, 24, 39, 0.6);
+
+  --color-text-primary: #ffffff;
+  --color-text-muted: #9ca3af;
+
+  --color-border-default: rgba(255, 255, 255, 0.08);
+
+  --color-surface-subtle: rgba(255, 255, 255, 0.03);
+  --color-surface-highlight: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  --color-success: #4ade80;
+  --color-error: #f87171;
+
+  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+  font-family: var(--font-family-sans);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--color-text-primary);
+  background-color: var(--color-background-main);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-background-main);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+:focus-visible {
+  outline: 1px solid #a78bfa;
+  outline-offset: 1px;
+}
+
+::selection {
+  background-color: rgba(167, 139, 250, 0.3);
+  color: #ffffff;
+}
